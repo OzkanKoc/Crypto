@@ -3,7 +3,7 @@
 
 int main(int argc, char *argv[]) {
 	printf("Sayiyi giriniz: ");
-	int sayi,i=0,dizi[10],a,x;;
+	int sayi,i=0,dizi[30],a,x;;
 	scanf("%d",&sayi);
 	printf("Taban degerini giriniz: ");
 	scanf("%d",&x);
