@@ -1,28 +1,31 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <math.h>
 
 int main(int argc, char *argv[]) {
 	printf("Sayiyi giriniz: ");
-	int sayi,i=0,dizi[32],a,x;;
+	int sayi,x,i,a=0;
 	scanf("%d",&sayi);
 	printf("Taban degerini giriniz: ");
 	scanf("%d",&x);
-	while(sayi!=0 && sayi!=1){
-		dizi[i]=sayi%x;
-		sayi=sayi/x;
-		i++;
+	while(sayi>pow(x,a)) a=a+1;	
+	while(sayi>=x){
+		if(sayi<pow(x,(a-1))){
+			a=0;
+			while(sayi>pow(x,a)) a=a+1;	
+		}
+		if(sayi==pow(x,(a))){
+			printf("%d^%d",x,(a));
+			sayi-=pow(x,(a));
+		}else{
+			printf("%d^%d",x,(a-1));
+			sayi-=pow(x,(a-1));
+		}
+		sayi>=x ? printf(" + "):printf("");
 	}
-	if(sayi!=0){
-		dizi[i]=1;
+	if(sayi>=1){
+		for(i=0;i<sayi;i++)
+			printf("+ %d^%d ",x,0);
 	}
-	if(sayi==0)printf("0\n");
-	
-	for(a=i;a>=0;a--){
-		dizi[i]==1 ? printf("%d^%d ",x,i):printf("");
-		i!=0 && dizi[i-1]==1 ? printf("+ "): printf("");
-		i--;
-	}
-	
-	
 	return 0;
 }
