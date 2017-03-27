@@ -7,7 +7,7 @@ int main(int argc, char *argv[]) {
 	printf("Sayiyi giriniz: ");
 	int sayi,i=0,dizi[10],a,x;;
 	scanf("%d",&sayi);
-	printf("Kat sayiyi giriniz: ");
+	printf("Taban degerini giriniz: ");
 	scanf("%d",&x);
 	while(sayi!=0 && sayi!=1){
 		dizi[i]=sayi%x;
