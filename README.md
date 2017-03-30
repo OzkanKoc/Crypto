@@ -1,1 +1,1 @@
-# CryptoSystem
+# RabinCryptoSystem
